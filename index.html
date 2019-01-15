@@ -62,7 +62,7 @@
                 </legend>
                 <div class="formRow">
                     <label for="name">Name*</label>
-                    <input Name="custName" id="name" type="text" placeholder="first and last name" />
+                    <input Name="custName" id="name" type="text" placeholder="first and last name" required />
                 </div>
                 <div class="formRow">
                     <label for="street">Street address</label>
@@ -78,15 +78,15 @@
                 </div>
                 <div class="formRow">
                     <label for="zip">Postal code</label>
-                    <input Name="custZip" id="zip" type="text" placeholder=" nnnnn (-nnnn)" />
+                    <input Name="custZip" id="zip" type="text" placeholder=" nnnnn (-nnnn)" pattern="^\d{5}(-\d{4})?$" />
                 </div>
                 <div class="formRow">
                     <label for="phone">Phone number</label>
-                    <input Name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" />
+                    <input Name="custPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" />
                 </div>
                 <div class="formRow">
                     <label for="email"> E-mail*</label>
-                    <input Name="custEmail" id="mail" type="email" />
+                    <input Name="custEmail" id="mail" type="email" required />
                 </div>
 
                 <div class="formRow">
@@ -183,11 +183,12 @@
                 <label for="commBox">Tell us more about your experience!</label>
                 <textarea name="custExp" id="commBox"></textarea>
 
-
-
-
-
             </fieldset>
+
+            <div id="buttons">
+                <input type="submit" value="Submit My Survey" />
+                <input type="reset" value="Cancel">
+            </div>
         </form>
 
 
